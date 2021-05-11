@@ -13,10 +13,10 @@ namespace CompaniesOfferAPI.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
-        public ExceptionMiddleware(RequestDelegate next, ILogger logger)
+        public ExceptionMiddleware(RequestDelegate next, ILoggerFactory loggerFactory)
         {
             _next = next;
-            _logger = logger;
+            _logger = loggerFactory.CreateLogger<ExceptionMiddleware>();
         }
         public async Task InvokeAsync(HttpContext httpContext)
         {
@@ -33,6 +33,9 @@ namespace CompaniesOfferAPI.Middleware
         {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+            _logger.LogError($"Something went wrong : {exception.Message}");
+
             return context.Response.WriteAsync(new ErrorDetails()
             {
                 StatusCode = context.Response.StatusCode,

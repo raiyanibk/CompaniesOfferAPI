@@ -13,7 +13,6 @@ namespace CompaniesOfferAPI.Repository
     {
         public CompaniesOfferRepository()
         {
-
         }
 
         /// <summary>
@@ -26,7 +25,7 @@ namespace CompaniesOfferAPI.Repository
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.RX2Go);
             var cost = await GetCost(request, listOffers);
 
-            return await Task.FromResult(cost);
+            return cost;
         }
 
         /// <summary>
@@ -39,7 +38,7 @@ namespace CompaniesOfferAPI.Repository
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.FedX);
             var cost = await GetCost(request, listOffers);
 
-            return await Task.FromResult(cost);
+            return cost;
         }
 
         /// <summary>
@@ -52,7 +51,7 @@ namespace CompaniesOfferAPI.Repository
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.Premier);
             var cost = await GetCost(request, listOffers);
 
-            return await Task.FromResult(cost);
+            return cost;
         }
 
         private async Task<decimal> GetCost(OfferRequest request, List<CompanyInfo> companyInfos)
@@ -62,7 +61,7 @@ namespace CompaniesOfferAPI.Repository
             if (findOffer == null)
                 findOffer = companyInfos.Where(a => a.Source == string.Empty && a.Destination == string.Empty).FirstOrDefault();
 
-            return await Task.FromResult(findOffer.Cost);
+            return findOffer.Cost;
         }
     }
 }

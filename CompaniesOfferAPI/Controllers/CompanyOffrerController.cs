@@ -23,7 +23,7 @@ namespace CompaniesOfferAPI.Controllers
         [HttpPost]
         [Route("getrx2gooffer")]
         [Consumes(MediaTypeNames.Application.Json)]
-        public async Task<IActionResult> GetRX2GoOffer(API1Request request)
+        public async Task<IActionResult> GetRX2GoOffer(RX2APIRequest request)
         {
             var offer = await _companiesOfferService.GetRX2GoOffer(new OfferRequest
             {
@@ -41,7 +41,7 @@ namespace CompaniesOfferAPI.Controllers
         [HttpPost]
         [Route("getfedxoffer")]
         [Consumes(MediaTypeNames.Application.Json)]
-        public async Task<IActionResult> GetFedXOffer(API2Request request)
+        public async Task<IActionResult> GetFedXOffer(FedXAPIRequest request)
         {
             var offer = await _companiesOfferService.GetFedXOffer(new OfferRequest
             {
@@ -60,7 +60,7 @@ namespace CompaniesOfferAPI.Controllers
         [Route("getpremieroffer")]
         [Consumes(MediaTypeNames.Application.Xml)]
         [Produces(MediaTypeNames.Application.Xml)]
-        public async Task<IActionResult> GetPremierOffer(API3Request request)
+        public async Task<IActionResult> GetPremierOffer(PremierAPIRequest request)
         {
             var offer = await _companiesOfferService.GetPremierOffer(new OfferRequest
             {
