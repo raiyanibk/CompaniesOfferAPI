@@ -1,11 +1,11 @@
-﻿using CompaniesOfferAPI.Util.Models;
+﻿using AutoMapper;
 using CompaniesOfferAPI.Service;
+using CompaniesOfferAPI.Util.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using System;
-using Microsoft.Extensions.Logging;
-using AutoMapper;
 
 namespace CompaniesOfferAPI.Controllers
 {
@@ -31,7 +31,7 @@ namespace CompaniesOfferAPI.Controllers
             try
             {
                 _logger.LogInformation("FedX Contoller : GetServiceCharge Call");
-                var response = await _companiesServiceCharge.GetFedXServiceCharge(request);
+                var response = _companiesServiceCharge.GetFedXServiceCharge(request);
 
                 _logger.LogInformation("FedX Contoller : GetServiceCharge Success");
 

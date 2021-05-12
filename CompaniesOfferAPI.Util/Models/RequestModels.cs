@@ -33,7 +33,7 @@ namespace CompaniesOfferAPI.Util.Models
         }
     }
 
-    public class OfferRequest
+    public class ServiceChargeRequest
     {
         public string Source { get; set; }
         public string Destination { get; set; }

@@ -8,8 +8,8 @@ namespace CompaniesOfferAPI.Service
 {
     public interface ICompaniesServiceCharge
     {
-        Task<RX2GoAPIResponse> GetRX2GoServiceCharge(RX2APIRequest request);
-        Task<FedXAPIResponse> GetFedXServiceCharge(FedXAPIRequest request);
-        Task<PremierAPIResponse> GetPremierServiceCharge(PremierAPIRequest request);
+        RX2GoAPIResponse GetRX2GoServiceCharge(RX2APIRequest request);
+        FedXAPIResponse GetFedXServiceCharge(FedXAPIRequest request);
+        PremierAPIResponse GetPremierServiceCharge(PremierAPIRequest request);
     }
 }

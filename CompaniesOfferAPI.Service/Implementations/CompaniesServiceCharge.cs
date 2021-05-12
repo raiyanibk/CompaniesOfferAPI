@@ -17,18 +17,20 @@ namespace CompaniesOfferAPI.Service
             _mapper = mapper;
         }
 
-        public async Task<RX2GoAPIResponse> GetRX2GoServiceCharge(RX2APIRequest request)
+        public RX2GoAPIResponse GetRX2GoServiceCharge(RX2APIRequest request)
         {
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.RX2Go);
 
-            var offer = new OfferRequest
-            {
-                Source = request.contactaddress,
-                Destination = request.warehouseaddress,
-                Carton = request.packagedimensions,
-            };
+            var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(offer, listOffers);
+            //var chargeRequest = new ServiceChargeRequest
+            //{
+            //    Source = request.contactaddress,
+            //    Destination = request.warehouseaddress,
+            //    Carton = request.packagedimensions,
+            //};
+
+            var charge = GetServiceCharge(chargeRequest, listOffers);
 
             return new RX2GoAPIResponse
             {
@@ -36,18 +38,20 @@ namespace CompaniesOfferAPI.Service
             };
         }
 
-        public async Task<FedXAPIResponse> GetFedXServiceCharge(FedXAPIRequest request)
+        public FedXAPIResponse GetFedXServiceCharge(FedXAPIRequest request)
         {
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.FedX);
 
-            var offer = new OfferRequest
-            {
-                Source = request.consignee,
-                Destination = request.consignor,
-                Carton = request.cartons,
-            };
+            var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(offer, listOffers);
+            //var chargeRequest = new ServiceChargeRequest
+            //{
+            //    Source = request.consignee,
+            //    Destination = request.consignor,
+            //    Carton = request.cartons,
+            //};
+
+            var charge = GetServiceCharge(chargeRequest, listOffers);
 
             return new FedXAPIResponse
             {
@@ -55,23 +59,25 @@ namespace CompaniesOfferAPI.Service
             };
         }
 
-        public async Task<PremierAPIResponse> GetPremierServiceCharge(PremierAPIRequest request)
+        public PremierAPIResponse GetPremierServiceCharge(PremierAPIRequest request)
         {
             var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.Premier);
 
-            var offer = new OfferRequest
-            {
-                Source = request.source,
-                Destination = request.destination,
-                Carton = request.packagedimensions,
-            };
+            var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(offer, listOffers);
+            //var chargeRequest = new ServiceChargeRequest
+            //{
+            //    Source = request.source,
+            //    Destination = request.destination,
+            //    Carton = request.packagedimensions,
+            //};
+
+            var charge = GetServiceCharge(chargeRequest, listOffers);
 
             return new PremierAPIResponse { quote = charge };
         }
 
-        private decimal GetServiceCharge(OfferRequest request, List<CompanyInfo> companyInfos)
+        private decimal GetServiceCharge(ServiceChargeRequest request, List<CompanyInfo> companyInfos)
         {
             var findOffer = companyInfos.Where(a => a.Source == request.Source && a.Destination == request.Destination && a.Diamention.SequenceEqual(request.Carton)).FirstOrDefault();
 

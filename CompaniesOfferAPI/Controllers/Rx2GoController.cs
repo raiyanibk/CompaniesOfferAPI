@@ -29,7 +29,7 @@ namespace CompaniesOfferAPI.Controllers
             {
                 _logger.LogInformation("RX2Go Contoller : GetServiceCharge call");
                 
-                var response = await _companiesServiceCharge.GetRX2GoServiceCharge(request);
+                var response = _companiesServiceCharge.GetRX2GoServiceCharge(request);
 
                 _logger.LogInformation("RX2Go Contoller : GetServiceCharge Success");
 

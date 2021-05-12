@@ -30,7 +30,7 @@ namespace CompaniesOfferAPI.Controllers
             {
                 _logger.LogInformation("Premier Contoller : GetServiceCharge Call");
 
-                var response = await _companiesServiceCharge.GetPremierServiceCharge(request);
+                var response = _companiesServiceCharge.GetPremierServiceCharge(request);
                 
                 _logger.LogInformation("Premier Contoller : GetServiceCharge Success");
 

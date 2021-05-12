@@ -1,3 +1,4 @@
+using AutoMapper;
 using CompaniesOfferAPI.Middleware;
 using CompaniesOfferAPI.Service;
 using Microsoft.AspNetCore.Builder;
@@ -23,7 +24,14 @@ namespace CompaniesOfferAPI
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            //services.AddAutoMapper(AppDomain.GetAssemblies());
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddMaps("CompaniesOfferAPI.Util");
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
 
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddTransient<ICompaniesServiceCharge, CompaniesServiceCharge>();
