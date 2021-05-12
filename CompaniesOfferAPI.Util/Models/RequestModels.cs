@@ -1,10 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace CompaniesOfferAPI.Common.Models
+namespace CompaniesOfferAPI.Util.Models
 {
     public class RX2APIRequest
     {
@@ -13,14 +14,14 @@ namespace CompaniesOfferAPI.Common.Models
         public int[] packagedimensions { get; set; }
     }
 
-    public class FedXAPIRequest
+    public class FedXAPIRequest 
     {
         public string consignee { get; set; }
         public string consignor { get; set; }
         public int[] cartons { get; set; }
     }
 
-    public class PremierAPIRequest
+    public class PremierAPIRequest 
     {
         public string source { get; set; }
         public string destination { get; set; }

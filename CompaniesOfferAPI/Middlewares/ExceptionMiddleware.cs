@@ -1,4 +1,4 @@
-﻿using CompaniesOfferAPI.Common.Models;
+﻿using CompaniesOfferAPI.Util.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;

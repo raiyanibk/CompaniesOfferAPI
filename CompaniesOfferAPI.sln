@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompaniesOfferAPI", "CompaniesOfferAPI\CompaniesOfferAPI.csproj", "{39521BE8-D8DA-4657-86A9-F5D0A9D43A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompaniesOfferAPI", "CompaniesOfferAPI\CompaniesOfferAPI.csproj", "{39521BE8-D8DA-4657-86A9-F5D0A9D43A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompaniesOfferAPI.Business", "CompaniesOfferAPI.Business\CompaniesOfferAPI.Business.csproj", "{C00BF131-00DE-4006-A026-6F5C9A337DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompaniesOfferAPI.Service", "CompaniesOfferAPI.Service\CompaniesOfferAPI.Service.csproj", "{85872A3D-68A6-4839-B6F1-593D9A585374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompaniesOfferAPI.Repository", "CompaniesOfferAPI.Repository\CompaniesOfferAPI.Repository.csproj", "{85872A3D-68A6-4839-B6F1-593D9A585374}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompaniesOfferAPI.Common", "CompaniesOfferAPI.Common\CompaniesOfferAPI.Common.csproj", "{24AA5062-09D2-40E8-B1DD-42AEFCF69EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompaniesOfferAPI.Util", "CompaniesOfferAPI.Util\CompaniesOfferAPI.Util.csproj", "{24AA5062-09D2-40E8-B1DD-42AEFCF69EFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{39521BE8-D8DA-4657-86A9-F5D0A9D43A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39521BE8-D8DA-4657-86A9-F5D0A9D43A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39521BE8-D8DA-4657-86A9-F5D0A9D43A21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C00BF131-00DE-4006-A026-6F5C9A337DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C00BF131-00DE-4006-A026-6F5C9A337DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C00BF131-00DE-4006-A026-6F5C9A337DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C00BF131-00DE-4006-A026-6F5C9A337DD6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{85872A3D-68A6-4839-B6F1-593D9A585374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{85872A3D-68A6-4839-B6F1-593D9A585374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85872A3D-68A6-4839-B6F1-593D9A585374}.Release|Any CPU.ActiveCfg = Release|Any CPU

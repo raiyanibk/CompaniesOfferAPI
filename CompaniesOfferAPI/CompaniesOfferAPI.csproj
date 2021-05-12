@@ -5,12 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\CompanyOffrerController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CompaniesOfferAPI.Business\CompaniesOfferAPI.Business.csproj" />
-    <ProjectReference Include="..\CompaniesOfferAPI.Common\CompaniesOfferAPI.Common.csproj" />
+    <ProjectReference Include="..\CompaniesOfferAPI.Service\CompaniesOfferAPI.Service.csproj" />
+    <ProjectReference Include="..\CompaniesOfferAPI.Util\CompaniesOfferAPI.Util.csproj" />
   </ItemGroup>
 
 

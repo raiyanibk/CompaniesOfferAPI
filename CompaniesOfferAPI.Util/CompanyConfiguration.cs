@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CompaniesOfferAPI.Common
+namespace CompaniesOfferAPI.Util
 {
     public class CompanyConfiguration
     {

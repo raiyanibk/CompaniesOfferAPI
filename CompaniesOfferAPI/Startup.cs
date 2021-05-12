@@ -1,13 +1,11 @@
-using CompaniesOfferAPI.Business;
-using CompaniesOfferAPI.Business.Interface;
 using CompaniesOfferAPI.Middleware;
-using CompaniesOfferAPI.Repository;
-using CompaniesOfferAPI.Repository.Interface;
+using CompaniesOfferAPI.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace CompaniesOfferAPI
 {
@@ -25,10 +23,11 @@ namespace CompaniesOfferAPI
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddMvc().AddXmlSerializerFormatters();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddTransient<ICompaniesOfferService, CompaniesOfferService>();
-            services.AddTransient<ICompaniesOfferRepository, CompaniesOfferRepository>();
+            services.AddMvc().AddXmlSerializerFormatters();
+            services.AddTransient<ICompaniesServiceCharge, CompaniesServiceCharge>();
+            
 
         }
 

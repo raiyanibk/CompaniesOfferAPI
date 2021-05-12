@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>CompaniesOfferAPI.Service</AssemblyName>
+    <RootNamespace>CompaniesOfferAPI.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompaniesOfferAPI.Util\CompaniesOfferAPI.Util.csproj" />
+  </ItemGroup>
+
+</Project>

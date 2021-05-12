@@ -1,10 +1,6 @@
-﻿using CompaniesOfferAPI.Business.Interface;
-using CompaniesOfferAPI.Common.Models;
-using Microsoft.AspNetCore.Http;
+﻿using CompaniesOfferAPI.Util.Models;
+using CompaniesOfferAPI.Service;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
@@ -14,8 +10,8 @@ namespace CompaniesOfferAPI.Controllers
     [ApiController]
     public class CompanyOffrerController : ControllerBase
     {
-        private readonly ICompaniesOfferService _companiesOfferService;
-        public CompanyOffrerController(ICompaniesOfferService companiesOfferService)
+        private readonly ICompaniesServiceCharge _companiesOfferService;
+        public CompanyOffrerController(ICompaniesServiceCharge companiesOfferService)
         {
             _companiesOfferService = companiesOfferService;
         }
@@ -25,7 +21,7 @@ namespace CompaniesOfferAPI.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         public async Task<IActionResult> GetRX2GoOffer(RX2APIRequest request)
         {
-            var offer = await _companiesOfferService.GetRX2GoOffer(new OfferRequest
+            var offer = await _companiesOfferService.GetRX2GoServiceCharge(new OfferRequest
             {
                 Source = request.contactaddress,
                 Destination = request.warehouseaddress,
@@ -43,7 +39,7 @@ namespace CompaniesOfferAPI.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         public async Task<IActionResult> GetFedXOffer(FedXAPIRequest request)
         {
-            var offer = await _companiesOfferService.GetFedXOffer(new OfferRequest
+            var offer = await _companiesOfferService.GetFedXServiceCharge(new OfferRequest
             {
                 Source = request.consignee,
                 Destination = request.consignor,
@@ -62,7 +58,7 @@ namespace CompaniesOfferAPI.Controllers
         [Produces(MediaTypeNames.Application.Xml)]
         public async Task<IActionResult> GetPremierOffer(PremierAPIRequest request)
         {
-            var offer = await _companiesOfferService.GetPremierOffer(new OfferRequest
+            var offer = await _companiesOfferService.GetPremierServiceCharge(new OfferRequest
             {
                 Source = request.source,
                 Destination = request.destination,
