@@ -18,11 +18,11 @@ namespace CompaniesOfferAPI.Service
 
         public RX2GoAPIResponse GetRX2GoServiceCharge(RX2APIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.RX2Go);
+            var serviceChargeList = CompanyConfiguration.LoadServiceChargeData(CompanyName.RX2Go);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(chargeRequest, listOffers);
+            var charge = GetServiceCharge(chargeRequest, serviceChargeList);
 
             return new RX2GoAPIResponse
             {
@@ -32,11 +32,11 @@ namespace CompaniesOfferAPI.Service
 
         public FedXAPIResponse GetFedXServiceCharge(FedXAPIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.FedX);
+            var serviceChargeList = CompanyConfiguration.LoadServiceChargeData(CompanyName.FedX);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(chargeRequest, listOffers);
+            var charge = GetServiceCharge(chargeRequest, serviceChargeList);
 
             return new FedXAPIResponse
             {
@@ -46,18 +46,18 @@ namespace CompaniesOfferAPI.Service
 
         public PremierAPIResponse GetPremierServiceCharge(PremierAPIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.Premier);
+            var serviceChargeList = CompanyConfiguration.LoadServiceChargeData(CompanyName.Premier);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
-            var charge = GetServiceCharge(chargeRequest, listOffers);
+            var charge = GetServiceCharge(chargeRequest, serviceChargeList);
 
             return new PremierAPIResponse { Quote = charge };
         }
 
-        private decimal GetServiceCharge(ServiceChargeRequest request, List<CompanyInfo> companyInfos)
+        private decimal GetServiceCharge(ServiceChargeRequest request, List<ServiceChargeDetails> serviceCharge)
         {
-            var findOffer = companyInfos.FirstOrDefault(a => a.Source == request.Source && a.Destination == request.Destination && a.Dimension.SequenceEqual(request.Carton));
+            var findOffer = serviceCharge.FirstOrDefault(a => a.Source == request.Source && a.Destination == request.Destination && a.Dimension.SequenceEqual(request.Carton));
 
             if (findOffer == null)
                 throw new NoContentException("No data found for this request");

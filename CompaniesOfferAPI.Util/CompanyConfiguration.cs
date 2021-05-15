@@ -7,14 +7,14 @@ namespace CompaniesOfferAPI.Util
 {
     public class CompanyConfiguration
     {
-        public static List<CompanyInfo> LoadSampleData(string companyName)
+        public static List<ServiceChargeDetails> LoadServiceChargeData(string companyName)
         {
             // Mock Companies Information
 
-            List<CompanyInfo> companies = new List<CompanyInfo>();
+            List<ServiceChargeDetails> companies = new List<ServiceChargeDetails>();
 
             // Company 1 : RX2Go
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S1",
@@ -22,7 +22,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 100
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S1",
@@ -30,7 +30,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 200
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S1",
@@ -39,7 +39,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 300
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S2",
@@ -47,7 +47,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 300
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S2",
@@ -55,7 +55,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 420
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S2",
@@ -64,7 +64,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 500
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S3",
@@ -72,7 +72,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 300
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S3",
@@ -80,7 +80,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 440
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "S3",
@@ -90,7 +90,7 @@ namespace CompaniesOfferAPI.Util
             });
            
             //// Company 2 : FedX
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S1",
@@ -98,7 +98,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 110
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S1",
@@ -106,7 +106,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 190
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S1",
@@ -115,7 +115,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 310
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S2",
@@ -123,7 +123,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 310
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S2",
@@ -131,7 +131,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 410
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S2",
@@ -140,7 +140,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 510
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S3",
@@ -148,7 +148,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 350
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S3",
@@ -156,7 +156,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 430
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "S3",
@@ -166,7 +166,7 @@ namespace CompaniesOfferAPI.Util
             });
 
             //// Company 3 : Premier
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S1",
@@ -174,7 +174,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 130
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S1",
@@ -182,7 +182,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 230
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S1",
@@ -191,7 +191,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 290
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S2",
@@ -199,7 +199,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 330
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S2",
@@ -207,7 +207,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 430
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S2",
@@ -216,7 +216,7 @@ namespace CompaniesOfferAPI.Util
                 Cost = 490
             });
             //-----
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S3",
@@ -224,7 +224,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 4, 4, 4 },
                 Cost = 370
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S3",
@@ -232,7 +232,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { 5, 5, 5 },
                 Cost = 470
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "S3",
@@ -243,7 +243,7 @@ namespace CompaniesOfferAPI.Util
 
 
             //-- Default
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.RX2Go,
                 Source = "",
@@ -251,7 +251,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { },
                 Cost = 550
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.FedX,
                 Source = "",
@@ -259,7 +259,7 @@ namespace CompaniesOfferAPI.Util
                 Dimension = new int[] { },
                 Cost = 650
             });
-            companies.Add(new CompanyInfo
+            companies.Add(new ServiceChargeDetails
             {
                 Name = CompanyName.Premier,
                 Source = "",
@@ -273,7 +273,7 @@ namespace CompaniesOfferAPI.Util
     }
 
 
-    public class CompanyInfo
+    public class ServiceChargeDetails
     {
         public string Name { get; set; }
         public string Source { get; set; }

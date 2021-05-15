@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CompaniesOfferAPI.Middleware
 {
-    public class ApiKeyMiddleware
+    public class AuthMiddleware
     {
         private readonly RequestDelegate _next;
         private const string APIKEYNAME = "ApiKey";
-        public ApiKeyMiddleware(RequestDelegate next)
+        public AuthMiddleware(RequestDelegate next)
         {
             _next = next;
         }
