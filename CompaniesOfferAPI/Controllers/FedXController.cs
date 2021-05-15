@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CompaniesOfferAPI.Service;
+﻿using CompaniesOfferAPI.Service;
 using CompaniesOfferAPI.Util.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

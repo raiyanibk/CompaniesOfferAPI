@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CompaniesOfferAPI.Util.Dtos
+﻿namespace CompaniesOfferAPI.Util.Dtos
 {
     public class RX2GoAPIResponse
     {
