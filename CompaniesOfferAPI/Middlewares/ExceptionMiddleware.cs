@@ -1,10 +1,8 @@
 ﻿using CompaniesOfferAPI.Util.CustomException;
-using CompaniesOfferAPI.Util.Models;
+using CompaniesOfferAPI.Util.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -46,6 +44,9 @@ namespace CompaniesOfferAPI.Middleware
                 case nameof(NotFoundException):
                     statusCode = (int)HttpStatusCode.NotFound;
                     break;
+                case nameof(NoContentException):
+                    statusCode = (int)HttpStatusCode.NoContent;
+                    break;
                 default:
                     statusCode = (int)HttpStatusCode.InternalServerError;
                     exceptionMessage = "Something went wrong";
@@ -57,7 +58,7 @@ namespace CompaniesOfferAPI.Middleware
 
             _logger.LogError($"{exception.Message}");
 
-            return context.Response.WriteAsync(new ErrorDetails()
+            return context.Response.WriteAsync(new ErrorDetail()
             {
                 StatusCode = statusCode,
                 Message = exceptionMessage

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CompaniesOfferAPI.Util.Models
+namespace CompaniesOfferAPI.Util.Dtos
 {
-    public class ErrorDetails
+    public class ErrorDetail
     {
         public int StatusCode { get; set; }
         public string Message { get; set; }

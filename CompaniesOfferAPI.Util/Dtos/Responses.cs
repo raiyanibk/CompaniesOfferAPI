@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CompaniesOfferAPI.Util.Models
+namespace CompaniesOfferAPI.Util.Dtos
 {
     public class RX2GoAPIResponse
     {

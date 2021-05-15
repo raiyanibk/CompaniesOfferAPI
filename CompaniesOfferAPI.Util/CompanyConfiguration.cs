@@ -19,7 +19,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 100
             });
             companies.Add(new CompanyInfo
@@ -27,7 +27,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 200
             });
             companies.Add(new CompanyInfo
@@ -35,7 +35,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 300
             });
             //-----
@@ -44,7 +44,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 300
             });
             companies.Add(new CompanyInfo
@@ -52,7 +52,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 420
             });
             companies.Add(new CompanyInfo
@@ -60,7 +60,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 500
             });
             //-----
@@ -69,7 +69,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 300
             });
             companies.Add(new CompanyInfo
@@ -77,7 +77,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 440
             });
             companies.Add(new CompanyInfo
@@ -85,7 +85,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 520
             });
            
@@ -95,7 +95,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 110
             });
             companies.Add(new CompanyInfo
@@ -103,7 +103,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 190
             });
             companies.Add(new CompanyInfo
@@ -111,7 +111,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 310
             });
             //-----
@@ -120,7 +120,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 310
             });
             companies.Add(new CompanyInfo
@@ -128,7 +128,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 410
             });
             companies.Add(new CompanyInfo
@@ -136,7 +136,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 510
             });
             //-----
@@ -145,7 +145,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 350
             });
             companies.Add(new CompanyInfo
@@ -153,7 +153,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 430
             });
             companies.Add(new CompanyInfo
@@ -161,7 +161,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 550
             });
 
@@ -171,7 +171,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 130
             });
             companies.Add(new CompanyInfo
@@ -179,7 +179,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 230
             });
             companies.Add(new CompanyInfo
@@ -187,7 +187,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S1",
                 Destination = "D1",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 290
             });
             //-----
@@ -196,7 +196,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 330
             });
             companies.Add(new CompanyInfo
@@ -204,7 +204,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 430
             });
             companies.Add(new CompanyInfo
@@ -212,7 +212,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S2",
                 Destination = "D2",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 490
             });
             //-----
@@ -221,7 +221,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 4, 4, 4 },
+                Dimension = new int[] { 4, 4, 4 },
                 Cost = 370
             });
             companies.Add(new CompanyInfo
@@ -229,7 +229,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 5, 5, 5 },
+                Dimension = new int[] { 5, 5, 5 },
                 Cost = 470
             });
             companies.Add(new CompanyInfo
@@ -237,7 +237,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "S3",
                 Destination = "D3",
-                Diamention = new int[] { 6, 6, 6 },
+                Dimension = new int[] { 6, 6, 6 },
                 Cost = 500
             });
 
@@ -248,7 +248,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.RX2Go,
                 Source = "",
                 Destination = "",
-                Diamention = new int[] { },
+                Dimension = new int[] { },
                 Cost = 550
             });
             companies.Add(new CompanyInfo
@@ -256,7 +256,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.FedX,
                 Source = "",
                 Destination = "",
-                Diamention = new int[] { },
+                Dimension = new int[] { },
                 Cost = 650
             });
             companies.Add(new CompanyInfo
@@ -264,7 +264,7 @@ namespace CompaniesOfferAPI.Util
                 Name = CompanyName.Premier,
                 Source = "",
                 Destination = "",
-                Diamention = new int[] { },
+                Dimension = new int[] { },
                 Cost = 750
             });
 
@@ -278,7 +278,7 @@ namespace CompaniesOfferAPI.Util
         public string Name { get; set; }
         public string Source { get; set; }
         public string Destination { get; set; }
-        public int[] Diamention { get; set; }
+        public int[] Dimension { get; set; }
         public decimal Cost { get; set; }
     }
 

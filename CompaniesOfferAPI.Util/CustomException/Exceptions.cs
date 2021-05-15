@@ -37,4 +37,11 @@ namespace CompaniesOfferAPI.Util.CustomException
 
         public BadRequestException(string message, Exception innerException) : base(message: message, innerException: innerException) { }
     }
+
+    public class NoContentException : BaseException
+    {
+        public NoContentException(string message) : base(message: message) { }
+
+        public NoContentException(string message, Exception innerException) : base(message: message, innerException: innerException) { }
+    }
 }

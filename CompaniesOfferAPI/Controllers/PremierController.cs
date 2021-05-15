@@ -1,10 +1,10 @@
-﻿using CompaniesOfferAPI.Util.Models;
-using CompaniesOfferAPI.Service;
+﻿using CompaniesOfferAPI.Service;
+using CompaniesOfferAPI.Util.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using System;
-using Microsoft.Extensions.Logging;
 
 namespace CompaniesOfferAPI.Controllers
 {
@@ -12,9 +12,9 @@ namespace CompaniesOfferAPI.Controllers
     [ApiController]
     public class PremierController : ControllerBase
     {
-        private readonly ICompaniesServiceCharge _companiesServiceCharge;
+        private readonly ICompanyServiceCharge _companiesServiceCharge;
         private readonly ILogger _logger;
-        public PremierController(ICompaniesServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory)
+        public PremierController(ICompanyServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory)
         {
             _companiesServiceCharge = companiesServiceCharge;
             _logger = loggerFactory.CreateLogger<PremierController>();

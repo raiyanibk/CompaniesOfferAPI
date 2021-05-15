@@ -1,12 +1,8 @@
-﻿using CompaniesOfferAPI.Util.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CompaniesOfferAPI.Util.Dtos;
 
 namespace CompaniesOfferAPI.Service
 {
-    public interface ICompaniesServiceCharge
+    public interface ICompanyServiceCharge
     {
         RX2GoAPIResponse GetRX2GoServiceCharge(RX2APIRequest request);
         FedXAPIResponse GetFedXServiceCharge(FedXAPIRequest request);

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CompaniesOfferAPI.Service;
-using CompaniesOfferAPI.Util.Models;
+using CompaniesOfferAPI.Util.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,14 +13,12 @@ namespace CompaniesOfferAPI.Controllers
     [ApiController]
     public class FedXController : ControllerBase
     {
-        private readonly ICompaniesServiceCharge _companiesServiceCharge;
+        private readonly ICompanyServiceCharge _companyServiceCharge;
         private readonly ILogger _logger;
-        private readonly IMapper _mapper;
-        public FedXController(ICompaniesServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory, IMapper mapper)
+        public FedXController(ICompanyServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory, IMapper mapper)
         {
-            _companiesServiceCharge = companiesServiceCharge;
+            _companyServiceCharge = companiesServiceCharge;
             _logger = loggerFactory.CreateLogger<FedXController>();
-            _mapper = mapper;
         }
 
         [HttpPost]
@@ -31,7 +29,7 @@ namespace CompaniesOfferAPI.Controllers
             try
             {
                 _logger.LogInformation("FedX Contoller : GetServiceCharge Call");
-                var response = _companiesServiceCharge.GetFedXServiceCharge(request);
+                var response = _companyServiceCharge.GetFedXServiceCharge(request);
 
                 _logger.LogInformation("FedX Contoller : GetServiceCharge Success");
 

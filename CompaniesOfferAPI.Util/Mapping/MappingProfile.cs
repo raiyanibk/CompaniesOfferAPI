@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
-using CompaniesOfferAPI.Util.Models;
+﻿using AutoMapper;
+using CompaniesOfferAPI.Util.Dtos;
 
 namespace CompaniesOfferAPI.Util.Mapping
 {

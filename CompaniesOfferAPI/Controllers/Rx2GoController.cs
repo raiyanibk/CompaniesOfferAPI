@@ -12,9 +12,9 @@ namespace CompaniesOfferAPI.Controllers
     [ApiController]
     public class Rx2GoController : ControllerBase
     {
-        private readonly ICompaniesServiceCharge _companiesServiceCharge;
+        private readonly ICompanyServiceCharge _companiesServiceCharge;
         private readonly ILogger _logger;
-        public Rx2GoController(ICompaniesServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory)
+        public Rx2GoController(ICompanyServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory)
         {
             _companiesServiceCharge = companiesServiceCharge;
             _logger = loggerFactory.CreateLogger<Rx2GoController>();

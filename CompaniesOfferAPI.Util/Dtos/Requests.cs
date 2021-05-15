@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace CompaniesOfferAPI.Util.Models
+namespace CompaniesOfferAPI.Util.Dtos
 {
     public class RX2APIRequest
     {
