@@ -12,11 +12,11 @@ namespace CompaniesOfferAPI.Controllers
     [ApiController]
     public class PremierController : ControllerBase
     {
-        private readonly ICompanyServiceCharge _companiesServiceCharge;
+        private readonly ICompanyServiceCharge _companyServiceCharge;
         private readonly ILogger _logger;
-        public PremierController(ICompanyServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory)
+        public PremierController(ICompanyServiceCharge companyServiceCharge, ILoggerFactory loggerFactory)
         {
-            _companiesServiceCharge = companiesServiceCharge;
+            _companyServiceCharge = companyServiceCharge;
             _logger = loggerFactory.CreateLogger<PremierController>();
         }
 
@@ -30,7 +30,7 @@ namespace CompaniesOfferAPI.Controllers
             {
                 _logger.LogInformation("Premier Contoller : GetServiceCharge Call");
 
-                var response = _companiesServiceCharge.GetPremierServiceCharge(request);
+                var response = _companyServiceCharge.GetPremierServiceCharge(request);
                 
                 _logger.LogInformation("Premier Contoller : GetServiceCharge Success");
 

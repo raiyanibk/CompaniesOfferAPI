@@ -6,16 +6,16 @@ namespace CompaniesOfferAPI.Util.Dtos
 {
     public class RX2GoAPIResponse
     {
-        public decimal total { get; set; }
+        public decimal Total { get; set; }
     }
 
     public class FedXAPIResponse
     {
-        public decimal amount { get; set; }
+        public decimal Amount { get; set; }
     }
 
     public class PremierAPIResponse
     {
-        public decimal quote { get; set; }
+        public decimal Quote { get; set; }
     }
 }

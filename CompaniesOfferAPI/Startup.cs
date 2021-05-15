@@ -34,8 +34,6 @@ namespace CompaniesOfferAPI
 
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddTransient<ICompanyServiceCharge, CompanyServiceCharge>();
-            
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

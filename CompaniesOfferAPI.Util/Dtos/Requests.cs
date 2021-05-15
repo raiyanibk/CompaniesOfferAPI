@@ -9,27 +9,27 @@ namespace CompaniesOfferAPI.Util.Dtos
 {
     public class RX2APIRequest
     {
-        public string contactaddress { get; set; }
-        public string warehouseaddress { get; set; }
-        public int[] packagedimensions { get; set; }
+        public string ContactAddress { get; set; }
+        public string WarehouseAddress { get; set; }
+        public int[] PackageDimensions { get; set; }
     }
 
     public class FedXAPIRequest 
     {
-        public string consignee { get; set; }
-        public string consignor { get; set; }
-        public int[] cartons { get; set; }
+        public string Consignee { get; set; }
+        public string Consignor { get; set; }
+        public int[] Cartons { get; set; }
     }
 
     public class PremierAPIRequest 
     {
-        public string source { get; set; }
-        public string destination { get; set; }
-        public string packages { get; set; }
+        public string Source { get; set; }
+        public string Destination { get; set; }
+        public string Packages { get; set; }
 
         [IgnoreDataMember]
-        public int[] packagedimensions {
-            get => packages.Split(',').Select(n => int.Parse(n)).ToArray();
+        public int[] PackageDimensions {
+            get => Packages.Split(',').Select(n => int.Parse(n)).ToArray();
         }
     }
 

@@ -15,9 +15,9 @@ namespace CompaniesOfferAPI.Controllers
     {
         private readonly ICompanyServiceCharge _companyServiceCharge;
         private readonly ILogger _logger;
-        public FedXController(ICompanyServiceCharge companiesServiceCharge, ILoggerFactory loggerFactory, IMapper mapper)
+        public FedXController(ICompanyServiceCharge companyServiceCharge, ILoggerFactory loggerFactory, IMapper mapper)
         {
-            _companyServiceCharge = companiesServiceCharge;
+            _companyServiceCharge = companyServiceCharge;
             _logger = loggerFactory.CreateLogger<FedXController>();
         }
 

@@ -26,7 +26,7 @@ namespace CompaniesOfferAPI.Service
 
             return new RX2GoAPIResponse
             {
-                total = charge
+                Total = charge
             };
         }
 
@@ -40,7 +40,7 @@ namespace CompaniesOfferAPI.Service
 
             return new FedXAPIResponse
             {
-                amount = charge
+                Amount = charge
             };
         }
 
@@ -52,7 +52,7 @@ namespace CompaniesOfferAPI.Service
 
             var charge = GetServiceCharge(chargeRequest, listOffers);
 
-            return new PremierAPIResponse { quote = charge };
+            return new PremierAPIResponse { Quote = charge };
         }
 
         private decimal GetServiceCharge(ServiceChargeRequest request, List<CompanyInfo> companyInfos)
