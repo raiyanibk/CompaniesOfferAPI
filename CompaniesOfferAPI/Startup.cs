@@ -3,9 +3,11 @@ using CompaniesOfferAPI.Middleware;
 using CompaniesOfferAPI.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Serialization;
 using System;
 
 namespace CompaniesOfferAPI
@@ -33,7 +35,17 @@ namespace CompaniesOfferAPI
             services.AddSingleton(mapper);
 
             services.AddMvc().AddXmlSerializerFormatters();
+            
+            services.AddMvc(setupAction => {
+                setupAction.EnableEndpointRouting = false;
+            }).AddJsonOptions(jsonOptions =>
+            {
+                jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+            })
+            .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
             services.AddTransient<ICompanyServiceCharge, CompanyServiceCharge>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
