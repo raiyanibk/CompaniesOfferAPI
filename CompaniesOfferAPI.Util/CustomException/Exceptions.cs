@@ -4,15 +4,12 @@ namespace CompaniesOfferAPI.Util.CustomException
 {
     public class BaseException : Exception
     {
-        #region constructors and destructor
-
         public BaseException() { }
 
         public BaseException(string message) : base(message: message) { }
 
         public BaseException(string message, Exception innerException) : base(message: message, innerException: innerException) { }
 
-        #endregion
     }
 
     public class NotFoundException : BaseException
