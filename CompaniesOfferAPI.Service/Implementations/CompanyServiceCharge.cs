@@ -18,7 +18,7 @@ namespace CompaniesOfferAPI.Service
 
         public RX2GoAPIResponse GetRX2GoServiceCharge(RX2APIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.RX2Go);
+            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.RX2Go);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
@@ -32,7 +32,7 @@ namespace CompaniesOfferAPI.Service
 
         public FedXAPIResponse GetFedXServiceCharge(FedXAPIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.FedX);
+            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.FedX);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 
@@ -46,7 +46,7 @@ namespace CompaniesOfferAPI.Service
 
         public PremierAPIResponse GetPremierServiceCharge(PremierAPIRequest request)
         {
-            var listOffers = CompanyConfiguration.LoadComapanies(CompanyName.Premier);
+            var listOffers = CompanyConfiguration.LoadSampleData(CompanyName.Premier);
 
             var chargeRequest = _mapper.Map<ServiceChargeRequest>(request);
 

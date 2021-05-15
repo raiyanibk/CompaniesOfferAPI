@@ -7,7 +7,7 @@ namespace CompaniesOfferAPI.Util
 {
     public class CompanyConfiguration
     {
-        public static List<CompanyInfo> LoadComapanies(string companyName)
+        public static List<CompanyInfo> LoadSampleData(string companyName)
         {
             // Mock Companies Information
 
