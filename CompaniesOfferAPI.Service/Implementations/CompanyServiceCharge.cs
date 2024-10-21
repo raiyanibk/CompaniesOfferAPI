@@ -38,10 +38,12 @@ namespace CompaniesOfferAPI.Service
 
             var charge = GetServiceCharge(chargeRequest, serviceChargeList);
 
-            return new FedXAPIResponse
+            var res = new FedXAPIResponse
             {
                 Amount = charge
             };
+
+            return  res;
         }
 
         public PremierAPIResponse GetPremierServiceCharge(PremierAPIRequest request)
